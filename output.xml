@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.9 on darwin)" generated="20230623 15:06:16.827" rpa="false" schemaversion="3">
+<suite id="s1" name="Register" source="/Users/marcoslima/projects/telerisco-robot/register.robot">
+<test id="s1-t1" name="Cadastro de Usuário" line="17">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${SERVER_URL}</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Teste</arg>
+<arg>app=${EXECDIR}/app/app-release.apk</arg>
+<arg>udid=R9HT904MYRP</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="PASS" starttime="20230623 15:06:17.626" endtime="20230623 15:06:17.627"/>
+</kw>
+<msg timestamp="20230623 15:06:17.627" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Device R9HT904MYRP was not in the list of connected devices
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Device R9HT904MYRP was not in the list of connected devices
+    at getResponseForW3CError (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/errors.js:804:9)
+    at asyncHandler (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/protocol.js:380:37)</msg>
+<status status="FAIL" starttime="20230623 15:06:17.514" endtime="20230623 15:06:17.634"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${BtnStart}</arg>
+<arg>timeout=${WAIT_TIMEOUT}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="NOT RUN" starttime="20230623 15:06:17.635" endtime="20230623 15:06:17.635"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${BtnStart}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20230623 15:06:17.635" endtime="20230623 15:06:17.635"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${InputCPF}</arg>
+<arg>timeout=${WAIT_TIMEOUT}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="NOT RUN" starttime="20230623 15:06:17.635" endtime="20230623 15:06:17.635"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${InputCPF}</arg>
+<arg>${USER_CPF}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20230623 15:06:17.635" endtime="20230623 15:06:17.635"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${BtnRegister}</arg>
+<arg>timeout=${WAIT_TIMEOUT}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="NOT RUN" starttime="20230623 15:06:17.635" endtime="20230623 15:06:17.635"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${BtnRegister}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20230623 15:06:17.636" endtime="20230623 15:06:17.636"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${BtnTerms}</arg>
+<arg>timeout=${WAIT_TIMEOUT}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="NOT RUN" starttime="20230623 15:06:17.636" endtime="20230623 15:06:17.636"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${BtnTerms}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20230623 15:06:17.636" endtime="20230623 15:06:17.636"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${InputName}</arg>
+<arg>timeout=${WAIT_TIMEOUT}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="NOT RUN" starttime="20230623 15:06:17.637" endtime="20230623 15:06:17.637"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${InputName}</arg>
+<arg>${USER_NAME}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20230623 15:06:17.637" endtime="20230623 15:06:17.637"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${InputPhone}</arg>
+<arg>timeout=${WAIT_TIMEOUT}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="NOT RUN" starttime="20230623 15:06:17.637" endtime="20230623 15:06:17.637"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${InputPhone}</arg>
+<arg>${USER_PHONE}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20230623 15:06:17.637" endtime="20230623 15:06:17.637"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${InputEmail}</arg>
+<arg>timeout=${WAIT_TIMEOUT}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="NOT RUN" starttime="20230623 15:06:17.638" endtime="20230623 15:06:17.638"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${InputEmail}</arg>
+<arg>${USER_EMAIL}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20230623 15:06:17.639" endtime="20230623 15:06:17.640"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${BtnContinue}</arg>
+<arg>timeout=${WAIT_TIMEOUT}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="NOT RUN" starttime="20230623 15:06:17.640" endtime="20230623 15:06:17.640"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${BtnContinue}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20230623 15:06:17.640" endtime="20230623 15:06:17.641"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${BtnTakeAPicture}</arg>
+<arg>timeout=${WAIT_TIMEOUT}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="NOT RUN" starttime="20230623 15:06:17.641" endtime="20230623 15:06:17.641"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${BtnTakeAPicture}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20230623 15:06:17.641" endtime="20230623 15:06:17.641"/>
+</kw>
+<status status="FAIL" starttime="20230623 15:06:17.513" endtime="20230623 15:06:17.642">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Device R9HT904MYRP was not in the list of connected devices
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Device R9HT904MYRP was not in the list of connected devices
+    at getResponseForW3CError (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/errors.js:804:9)
+    at asyncHandler (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/protocol.js:380:37)</status>
+</test>
+<status status="FAIL" starttime="20230623 15:06:16.830" endtime="20230623 15:06:17.644"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Register">Register</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
